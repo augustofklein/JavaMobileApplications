@@ -15,7 +15,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     private static final String TABLE_PRODUCTS = "products";
     private static final String ID = "id";
     private static final String NAME = "name";
-    private static final String DESCRIPTION = "description";
+    private static final String DESCRIPTION = "desctiption";
     private static final String PRICE = "price";
     private static final String[] COLUMNS = {ID, NAME, DESCRIPTION, PRICE};
     public BDSQLiteHelper(Context context) {

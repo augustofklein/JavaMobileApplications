@@ -36,6 +36,7 @@ public class FirstFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+
         booksList = bd.getAllProducts();
 
         ListView list = binding.lvProducts;
