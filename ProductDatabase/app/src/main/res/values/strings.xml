@@ -9,4 +9,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="confirm_deletion">Remove Product</string>
+    <string name="really_want_to_delete">Confirm the deletion of the product?</string>
 </resources>
