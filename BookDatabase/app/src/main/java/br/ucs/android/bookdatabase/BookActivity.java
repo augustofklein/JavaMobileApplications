@@ -13,13 +13,13 @@ public class BookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_book);
         bd = new BDSQLiteHelper(this);
         final EditText name = (EditText) findViewById(R.id.edName);
         final EditText author = (EditText) findViewById(R.id.edAuthor);
         final EditText year = (EditText) findViewById(R.id.edYear);
-        Button newButton = (Button) findViewById(R.id.btnAdd);
-        newButton.setOnClickListener(new View.OnClickListener() {
+        Button novo = (Button) findViewById(R.id.btnAdd);
+        novo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Book book = new Book();
@@ -31,5 +31,5 @@ public class BookActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
+        }
 }

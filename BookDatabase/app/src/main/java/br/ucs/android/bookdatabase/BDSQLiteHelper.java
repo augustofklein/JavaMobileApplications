@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class BDSQLiteHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "bookDB";
+    private static final String DATABASE_NAME = "BookDB";
     private static final String TABLE_BOOKS = "books";
     private static final String ID = "id";
     private static final String TITLE = "title";

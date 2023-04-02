@@ -19,8 +19,7 @@ import br.ucs.android.bookdatabase.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -43,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
                 Intent intent = new Intent(MainActivity.this, BookActivity.class);
                 startActivity(intent);
             }
@@ -76,26 +79,5 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        ListView list = (ListView) findViewById(R.id.lvLivros);
-
-        booksList = bd.getAllBooks();
-
-        BooksAdapter adapter = new BooksAdapter(this, booksList);
-        list.setAdapter(adapter);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                Intent intent = new Intent(MainActivity.this, EditBookActivity.class);
-                intent.putExtra("ID", booksList.get(position).getId());
-                startActivity(intent);
-            }
-        });
     }
 }

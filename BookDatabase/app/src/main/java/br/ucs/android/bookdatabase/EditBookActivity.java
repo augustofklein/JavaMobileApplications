@@ -26,8 +26,8 @@ public class EditBookActivity extends AppCompatActivity {
         name.setText(book.getTitle());
         author.setText(book.getAuthor());
         year.setText(String.valueOf(book.getYear()));
-        final Button alterar = (Button) findViewById(R.id.btnUpdate);
-        alterar.setOnClickListener(new View.OnClickListener() {
+        final Button edit = (Button) findViewById(R.id.btnUpdate);
+        edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Book book = new Book();
