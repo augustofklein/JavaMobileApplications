@@ -69,9 +69,9 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     private Book cursorToBook(Cursor cursor) {
         Book book = new Book();
         book.setId(Integer.parseInt(cursor.getString(0)));
-        book.setTitulo(cursor.getString(1));
-        book.setAutor(cursor.getString(2));
-        book.setAno(Integer.parseInt(cursor.getString(3)));
+        book.setTitle(cursor.getString(1));
+        book.setAuthor(cursor.getString(2));
+        book.setYear(Integer.parseInt(cursor.getString(3)));
         return book;
     }
 
