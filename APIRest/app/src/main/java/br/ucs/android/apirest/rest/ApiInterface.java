@@ -10,10 +10,10 @@ import retrofit2.http.Path;
 
 public interface ApiInterface {
 
-    @GET("users")
+    @GET("posts/")
     Call<List<PostsResponse>> getAllPosts();
 
-    @GET("users/{userId}")
-    Call<PostsResponse> getPost(@Path("userId") int userId);
+    @GET("posts/{id}")
+    Call<List<PostsResponse>> getPost(@Path("id") int userId);
 
 }

@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiPost {
 
-    public static final String BASE_URL = "https://jsonplaceholder.typicode.com/posts/";
+    public static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getPost() {

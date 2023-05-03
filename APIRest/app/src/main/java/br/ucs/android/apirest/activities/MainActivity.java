@@ -35,18 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
         ApiInterface apiService = ApiPost.getPost().create(ApiInterface.class);
 
-        Call<PostsResponse> call = apiService.getPost(1);
-        call.enqueue(new Callback<PostsResponse>() {
-
+        Call<List<PostsResponse>> call = apiService.getAllPosts();
+        call.enqueue(new Callback<List<PostsResponse>>() {
             @Override
-            public void onResponse(Call<PostsResponse> call, Response<PostsResponse> response) {
+            public void onResponse(Call<List<PostsResponse>> call, Response<PostsResponse> response) {
                 int statusCode = response.code();
                 List<Post> posts = response.body().getResults();
                 recyclerView.setAdapter(new PostAdapter(posts, R.layout.list_item_post, getApplicationContext()));
             }
 
             @Override
-            public void onFailure(Call<PostsResponse> call, Throwable t) {
+            public void onFailure(Call<List<PostsResponse>> call, Throwable t) {
                 mostraAlerta("Erro", t.toString());
                 // Log error here since request failed
                 Log.e(TAG, t.toString());
